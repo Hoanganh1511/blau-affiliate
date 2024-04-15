@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+import { toast } from "sonner";
 import { BiBell, BiSolidBellRing } from "react-icons/bi";
 const InfoSection = () => {
   const [isNotice, setNotice] = useState(false);
@@ -26,7 +26,10 @@ const InfoSection = () => {
               />
             ) : (
               <BiBell
-                onClick={() => setNotice(true)}
+                onClick={() => {
+                  setNotice(true);
+                  toast.success("Bật thông báo từ Blau !");
+                }}
                 className="text-[20px] mt-[2px] ml-[8px] cursor-pointer"
               />
             )}
@@ -35,7 +38,7 @@ const InfoSection = () => {
             <div className="absolute bottom-[34px] left-0 w-[200px] p-[6px] rounded-md text-[12px] shadow-md opacity-0 animate-show-tooltip">
               Bật chuông để nhắc thông báo khi có sản phẩm mới
             </div>
-            <div className=" absolute bottom-[26px] left-[10px] w-0 h-0 border-l-[6px] border-l-transparent border-t-[8px] border-t-white border-r-[6px] border-r-transparent" />
+            <div className=" absolute bottom-[26px] left-[10px] w-0 h-0 border-l-[6px] border-l-transparent border-t-[8px] border-t-white border-r-[6px] border-r-transparent animate-show-tooltip" />
             {/* Tooltip */}
           </div>
         </div>

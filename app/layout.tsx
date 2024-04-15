@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import TopBar from "@/components/top-bar";
+import { Toaster } from "sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -23,9 +24,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-background-body`}>
+      <body
+        className={`${inter.className} bg-background-body overflow-x-hidden`}
+      >
         <TopBar />
-        <main className="pt-[50px] max-w-[460px] mx-auto ">{children}</main>
+        <main className="pt-[50px] max-w-[480px] px-[10px] mx-auto ">
+          {children}
+        </main>
+        <Toaster position="top-center" />
       </body>
     </html>
   );

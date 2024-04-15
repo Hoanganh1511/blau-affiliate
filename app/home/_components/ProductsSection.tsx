@@ -147,7 +147,7 @@ const ProductsSection = () => {
   return (
     <div className="px-[16px] py-[12px] bg-white/95 rounded-md">
       <div>
-        <h1 className="text-[22px] uppercase font-semibold text-black/80">
+        <h1 className="text-[18px] md:text-[22px] uppercase font-semibold text-black/80">
           Đồ tui mặc và review đây nha:
         </h1>
         <div className="mt-[10px] flex">
@@ -191,8 +191,8 @@ const ProductsSection = () => {
           ) : data.length > 0 ? (
             data.map((product, idx) => {
               return (
-                <div key={idx} className="w-[48%]">
-                  <div className="w-full h-[200px] relative">
+                <div key={idx} className="w-[46%]">
+                  <div className="aspect-[200/200] relative">
                     <Image
                       src={product.productImage}
                       alt=""

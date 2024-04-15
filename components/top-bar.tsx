@@ -3,8 +3,8 @@ import Image from "next/image";
 const TopBar = () => {
   return (
     <>
-      <div className="fixed  z-10 top-0 left-0 w-screen  bg-white">
-        <div className="w-[540px] h-[50px] mx-auto flex justify-center items-center">
+      <div className="fixed  z-10 top-0 left-0 w-full lg:w-screen  bg-white">
+        <div className="max-w-[540px] h-[50px] mx-auto flex justify-center items-center">
           <div className="flex items-center">
             <Image
               src="/images/icons/flower-icon.png"
